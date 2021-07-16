@@ -1,0 +1,82 @@
+﻿@model ShopKart.web.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<font color="Blue"><h1><B>&emsp;&emsp;
+            Details </B></h1>
+</font>
+
+<div>
+    <h3> &emsp;&emsp;&ensp;&ensp;Product</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <h4>   
+                @Html.DisplayNameFor(model => model.Name)
+            </h4>
+        </dt>
+
+        <dd>
+            <h4>
+                @Html.DisplayFor(model => model.Name)
+            </h4>
+        </dd>
+
+        <dt>
+            <h4>
+            @Html.DisplayNameFor(model => model.Size)
+            </h4>
+        </dt>
+
+        <dd>
+            <h4>
+            @Html.DisplayFor(model => model.Size)
+            </h4>
+        </dd>
+
+        <dt>
+            <h4>
+            @Html.DisplayNameFor(model => model.Quantity)
+            </h4>
+        </dt>
+
+        <dd>
+            <h4>
+            @Html.DisplayFor(model => model.Quantity)
+            </h4>
+        </dd>
+
+        <dt>
+            <h4>
+            @Html.DisplayNameFor(model => model.Description)
+            </h4>
+        </dt>
+
+        <dd>
+            <h4>
+            @Html.DisplayFor(model => model.Description)
+            </h4>
+        </dd>
+
+        <dt>
+            <h4>
+            @Html.DisplayNameFor(model => model.Price)
+            </h4>
+        </dt>
+
+        <dd>
+            <h4>
+            @Html.DisplayFor(model => model.Price)
+            </h4>
+        </dd>
+
+    </dl>
+</div>
+<p>
+  &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    
+    @Html.ActionLink("Back to List", "Index")
+</p>

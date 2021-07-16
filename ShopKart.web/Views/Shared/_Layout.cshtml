@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #aab5f5;
+        }
+
+        th {
+            background-color: #0026ff;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #00faff;
+        }
+       
+    </style>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color:#f3ebf6;">
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer> <p> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;
+                &emsp;&emsp;&ensp;&ensp; &copy; @DateTime.Now.Year - ShopKart
+                </p> </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

@@ -1,0 +1,54 @@
+﻿@model ShopKart.web.Order_Table
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body style="background-color:#f3ebf6;">
+    <div>
+        <font color="Blue">
+            <h1>
+                &emsp;&emsp;&ensp; &nbsp;  Details
+            </h1>
+        </font>
+
+        <h2>
+            &emsp;&emsp; &emsp;&emsp;&nbsp;Order
+        </h2>
+        <dl class="dl-horizontal">
+            <dt>
+                <h4>
+                    &emsp;&emsp;
+                    &emsp;&emsp;
+                    &emsp;&emsp;
+                    @Html.DisplayNameFor(model => model.Total_Price)
+                </h4>
+            </dt>
+
+            <dd>
+                <h4>
+                    &emsp;&emsp;
+                    &emsp;&emsp;
+ @Html.DisplayFor(model => model.Total_Price)
+                </h4>
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        &emsp;&emsp;
+        &emsp;&emsp;
+        &emsp;&emsp;
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
